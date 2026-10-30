@@ -1,0 +1,29 @@
+# ── Общий блок репозиториев с сервером ──
+# Только нейтральное: служебные файлы лежат в .git/info/exclude, не здесь.
+
+# Аварийные дампы Git Bash / MSYS — появляются в корне сами, содержимого не несут.
+*.stackdump
+
+# Системный мусор Windows / macOS, временные файлы редакторов и Office.
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+*.bak
+*~
+~$*
+nul
+# ── конец общего блока ──
+
+# ── Rules of this project ──
+# Python caches and environments.
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+# Downloaded corpus: Wikipedia text (CC BY-SA) is fetched again by the script, not stored here.
+corpus/
+# Run logs and model caches.
+runs/
+.cache/
