@@ -29,9 +29,22 @@ grounded strictly in the retrieved context with citations to the source page, ev
 Out of scope, because they do not change the comparison: task queues, a metadata database, access
 control, answer caching, streaming, a UI, and paid models.
 
+## Corpus
+
+```bash
+pip install -r requirements.txt
+python scripts/download_corpus.py            # latest revisions of the four pages
+python scripts/download_corpus.py --pinned   # the revisions recorded in corpus/manifest.json
+python -m pytest
+```
+
+The script saves the rendered HTML to `corpus/html/`, Markdown with tables to `corpus/text/`, and the
+revision ids, timestamps and hashes to `corpus/manifest.json`, so a run can be repeated on the same text.
+On Windows set `PYTHONIOENCODING=utf-8` before running it.
+
 ## Status
 
-Started 30.10.2026. Nothing is measured yet.
+Started 30.10.2026. The corpus download works; nothing is measured yet.
 
 ## Data and license
 
